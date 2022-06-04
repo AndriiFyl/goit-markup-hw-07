@@ -16,6 +16,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <body>
@@ -24,35 +25,35 @@
     Шапка сайта
     _________________________ -->
 
-    <header class="page-header">
-      <div class="container main-nav">
-        <nav class="nav-menu">
-          <a class="logo-site" href="./index.html"
-            ><span class="logo-part">Web</span>Studio</a
+    <header class="header">
+      <div class="container header__container">
+        <nav class="navigation header__navigation">
+          <a class="navigation__logo logo" href="./index.html"
+            ><span class="navigation__logo-part">Web</span>Studio</a
           >
-          <ul class="list site-nav">
-            <li class="item">
-              <a class="link-nav" href="./index.html">Студия</a>
+          <ul class="menu navigation__menu list">
+            <li class="menu__item">
+              <a class="menu__link" href="./index.html">Студия</a>
             </li>
-            <li class="item">
-              <a class="link-nav current" href="./portfolio.html">Портфолио</a>
+            <li class="menu__item">
+              <a class="menu__link  menu__link--current" href="./portfolio.html">Портфолио</a>
             </li>
-            <li class="item"><a class="link-nav" href="">Контакты</a></li>
+            <li class="menu__item"><a class="menu__link" href="">Контакты</a></li>
           </ul>
         </nav>
 
-        <ul class="list contact-nav">
-          <li class="item mail">
-            <a class="link-contacts mail" href="mailto:info@devstudio.com">
-              <svg class="item-icon mail" width="16px" height="12px">
+        <ul class="contacts navigation__contacts list">
+          <li class="contacts__item">
+            <a class="contacts__link" href="mailto:info@devstudio.com">
+              <svg class="contacts__icon" width="16px" height="12px">
                 <use href="./images/icons/sprite.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
-          <li class="item phone">
-            <a class="link-contacts phone" href="tel:+380961111111">
-              <svg class="item-icon phone" width="10px" height="16px">
+          <li class="contacts__item">
+            <a class="contacts__link" href="tel:+380961111111">
+              <svg class="contacts__icon" width="10px" height="16px">
                 <use href="./images/icons/sprite.svg#icon-phone"></use></svg
               >+38 096 111 11 11
             </a>
@@ -327,7 +328,7 @@
     <footer class="footer section">
       <div class="container footer">
         <div class="box-adress">
-          <a class="logo-footer" href="./index.html"
+          <a class="logo logo-footer" href="./index.html"
             ><span class="logo-part">Web</span>Studio</a
           >
           <address class="adress">
@@ -347,42 +348,79 @@
           </address>
         </div>
 
-        <div class="box-networks">
-          <h3 class="title networks">Присоединяйтесь</h3>
-          <ul class="list networks">
-            <li class="item networks">
-              <a href="" class="link-networks" aria-label="иконка Instagram">
-                <svg class="icon-footer instagram" width="20" height="20">
+        <div class="join footer__join">
+          <h3 class="join__title">Присоединяйтесь</h3>
+          <ul class="list-networks list">
+            <li class="list-networks__item">
+              <a
+                href=""
+                class="list-networks__link"
+                aria-label="иконка Instagram"
+              >
+                <svg class="list-networks__icon" width="20" height="20">
                   <use href="./images/icons/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
 
-            <li class="item networks">
-              <a href="" class="link-networks" aria-label="иконка Twitter">
-                <svg class="icon-footer twitter" width="20px" height="20px">
+            <li class="list-networks__item">
+              <a
+                href=""
+                class="list-networks__link"
+                aria-label="иконка Twitter"
+              >
+                <svg class="list-networks__icon" width="20px" height="20px">
                   <use href="./images/icons/sprite.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
 
-            <li class="item networks">
-              <a href="" class="link-networks" aria-label="иконка Facebook">
-                <svg class="icon-footer facebook" width="20px" height="20px">
+            <li class="list-networks__item">
+              <a
+                href=""
+                class="list-networks__link"
+                aria-label="иконка Facebook"
+              >
+                <svg class="list-networks__icon" width="20px" height="20px">
                   <use href="./images/icons/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
 
-            <li class="item networks">
-              <a href="" class="link-networks" aria-label="иконка Linkedin">
-                <svg class="icon-footer linkedin" width="20px" height="20px">
+            <li class="list-networks__item">
+              <a
+                href=""
+                class="list-networks__link"
+                aria-label="иконка Linkedin"
+              >
+                <svg class="list-networks__icon" width="20px" height="20px">
                   <use href="./images/icons/sprite.svg#icon-linkedin"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
+
+        <form class="sign-form" name="sign-form" method="post">
+          <b class="call-sign">Подпишитесь на рассылку</b>
+
+          <div class="group">
+            <label class="form-group">
+              <input
+                class="input-form"
+                type="email"
+                name="user-email"
+                placeholder="E-mail"
+              />
+            </label>
+            <button class="btn-send" type="submit">
+              <span class="subscribe-title">Подписаться</span>
+              <svg class="icon-subscribe" width="24" height="24">
+                <use href="./images/icons/form-sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
   </body>
